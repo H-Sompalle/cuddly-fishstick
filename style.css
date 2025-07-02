@@ -1,0 +1,186 @@
+/* General Body Styles */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Main Container */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Active and Hover States for Navigation */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #bb86fc; /* Accent color */
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #333;
+}
+
+#home {
+    text-align: center;
+    border-top: none; /* No border for the first section */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #bb86fc; /* Accent color for headings */
+    margin-bottom: 1em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+}
+
+/* Links */
+a {
+    color: #03dac6; /* A different accent for general links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Publication/Project List */
+#publications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#publications li {
+    margin-bottom: 1.5em;
+}
+
+#publications li a {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#publications li p {
+    margin-top: 0.5em;
+    color: #b0b0b0; /* Slightly muted text for descriptions */
+}
+
+/* Contact List */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+/* Test Scores Section Styling */
+.scores-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5em;
+}
+
+.scores-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1em 0.5em;
+    border-bottom: 1px solid #2a2a2a; /* A subtle separator */
+    transition: background-color 0.3s;
+}
+
+.scores-list li:hover {
+    background-color: #1e1e1e;
+}
+
+.scores-list .test-name {
+    font-weight: 600;
+    flex: 3; /* Gives more space to the name */
+}
+
+.scores-list .test-score {
+    color: #b0b0b0;
+    flex: 1; /* Gives less space */
+    text-align: center;
+}
+
+.scores-list .test-date {
+    color: #888;
+    flex: 1; /* Gives less space */
+    text-align: right;
+    font-size: 0.9em;
+}
+
+/* Make score layout stack on smaller screens */
+@media (max-width: 600px) {
+    .scores-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .scores-list .test-score,
+    .scores-list .test-date {
+        text-align: left;
+        margin-top: 0.25em;
+    }
+}
